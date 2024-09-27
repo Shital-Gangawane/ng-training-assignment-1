@@ -45,7 +45,7 @@ const TaskForm = ({ addTask, updateTask, currentTask, onClose }) => {
             {['assignedTo', 'status', 'dueDate', 'priority', 'comments'].map((field, index) => (
                 <div className="mb-4" key={index}>
                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor={field}>
-                        {field.charAt(0).toUpperCase() + field.slice(1)}
+                        {field.charAt(0).toUpperCase() + field.slice(1)} <span className='text-red-600'>*</span>
                     </label>
                     <input
                         type={field === 'dueDate' ? 'date' : 'text'}
